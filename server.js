@@ -16,14 +16,14 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: ["http://localhost:5173", "http://localhost:5176"],
+    origin: ["http://localhost:5173", "http://localhost:5176", "https://canteen-frontend-ruby.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"]
   }
 });
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5176"],
+  origin: ["http://localhost:5173", "http://localhost:5176", "https://canteen-frontend-ruby.vercel.app"],
   credentials: true
 }));
 app.use(express.json());
